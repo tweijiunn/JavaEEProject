@@ -1,0 +1,75 @@
+@startuml
+abstract class model.AbstractFacade
+annotation java.lang.Override
+annotation javax.ejb.Stateless
+annotation javax.persistence.Entity
+annotation javax.persistence.GeneratedValue
+annotation javax.persistence.Id
+annotation javax.persistence.PersistenceContext
+class com.sun.xml.ws.security.addressing.impl.policy.Constants
+class java.util.Date
+class java.util.List
+class javax.persistence.EntityManager
+class javax.persistence.GenerationType
+class javax.persistence.Query
+class model.Booking
+class model.BookingFacade
+class model.Feedback
+class model.FeedbackFacade
+class model.Hall
+class model.HallFacade
+class model.Users
+class model.UsersFacade
+interface java.io.Serializable
+model.AbstractFacade ..> com.sun.xml.ws.security.addressing.impl.policy.Constants
+model.AbstractFacade ..> java.util.List
+model.AbstractFacade ..> javax.persistence.EntityManager
+model.AbstractFacade ..> javax.persistence.Query
+model.Booking ..> java.lang.Override
+model.Booking ..> javax.persistence.Entity
+model.Booking ..> javax.persistence.GeneratedValue
+model.Booking ..> javax.persistence.Id
+model.Booking ..> java.util.Date
+model.Booking ..> javax.persistence.GenerationType
+model.Booking --|> java.io.Serializable
+model.BookingFacade --|> model.AbstractFacade
+model.BookingFacade ..> java.lang.Override
+model.BookingFacade ..> javax.ejb.Stateless
+model.BookingFacade ..> javax.persistence.PersistenceContext
+model.BookingFacade ..> javax.persistence.EntityManager
+model.Feedback ..> java.lang.Override
+model.Feedback ..> javax.persistence.Entity
+model.Feedback ..> javax.persistence.GeneratedValue
+model.Feedback ..> javax.persistence.Id
+model.Feedback ..> javax.persistence.GenerationType
+model.Feedback --|> java.io.Serializable
+model.FeedbackFacade --|> model.AbstractFacade
+model.FeedbackFacade ..> java.lang.Override
+model.FeedbackFacade ..> javax.ejb.Stateless
+model.FeedbackFacade ..> javax.persistence.PersistenceContext
+model.FeedbackFacade ..> javax.persistence.EntityManager
+model.Hall ..> java.lang.Override
+model.Hall ..> javax.persistence.Entity
+model.Hall ..> javax.persistence.GeneratedValue
+model.Hall ..> javax.persistence.Id
+model.Hall ..> java.util.Date
+model.Hall ..> javax.persistence.GenerationType
+model.Hall --|> java.io.Serializable
+model.HallFacade --|> model.AbstractFacade
+model.HallFacade ..> java.lang.Override
+model.HallFacade ..> javax.ejb.Stateless
+model.HallFacade ..> javax.persistence.PersistenceContext
+model.HallFacade ..> java.util.List
+model.HallFacade ..> javax.persistence.EntityManager
+model.Users ..> java.lang.Override
+model.Users ..> javax.persistence.Entity
+model.Users ..> javax.persistence.GeneratedValue
+model.Users ..> javax.persistence.Id
+model.Users ..> javax.persistence.GenerationType
+model.Users --|> java.io.Serializable
+model.UsersFacade --|> model.AbstractFacade
+model.UsersFacade ..> java.lang.Override
+model.UsersFacade ..> javax.ejb.Stateless
+model.UsersFacade ..> javax.persistence.PersistenceContext
+model.UsersFacade ..> javax.persistence.EntityManager
+@enduml
